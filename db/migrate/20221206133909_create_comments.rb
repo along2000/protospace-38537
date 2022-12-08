@@ -6,7 +6,7 @@ class CreateComments < ActiveRecord::Migration[6.0]
       t.references   :prototype, null: false, foreign_key: true
       t.references   :user,      null: false, foreign_key: true
 
-      t.integer      :prototype_id
+
     end
   end
 end
