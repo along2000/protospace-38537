@@ -5,7 +5,7 @@ class CreateComments < ActiveRecord::Migration[6.0]
       t.timestamps
       t.references   :prototype, null: false, foreign_key: true
       t.references   :user,      null: false, foreign_key: true
-      t.integer      :user_id
+
       t.integer      :prototype_id
     end
   end
