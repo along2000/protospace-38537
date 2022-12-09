@@ -43,10 +43,10 @@ end
 
 def destroy
   @prototype = Prototype.find(params[:id])
-  if @prototype.user_id != current_user.id
-  redirect_to root_path
-  else
+  if @prototype.user_id == current_user.id
     @prototype.destroy
+    redirect_to root_path
+  else
     redirect_to root_path
   end
 
